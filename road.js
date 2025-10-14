@@ -38,13 +38,19 @@ class Road{
                 i/this.laneCount
             );
 
-            
+            // middle lanes with gap
+        // setLineDash([a, b]) → make dashed lines
+        // beginPath() → start a new line drawing
+        // moveTo(x, y) → put pen at this point
+        // lineTo(x, y) → draw a line from current pen position
+        // stroke() → actually draw the line
             ctx.setLineDash([20,20]);
             ctx.beginPath();
             ctx.moveTo(x, this.top);
             ctx.lineTo(x, this.bottom);
             ctx.stroke();
         }
+        //set borders
         ctx.setLineDash([]);
         this.borders.forEach(border=>{
             ctx.beginPath();
